@@ -1,0 +1,96 @@
+
+create database ComicStore;
+use ComicStore;
+
+create table Suscripcion(
+	idSuscripcion int AUTO_INCREMENT,
+	Tipo varchar(30) NOT NULL,
+	fechaInicio DATE NOT NULL,
+	PRIMARY KEY(idSuscripcion)
+);
+
+create table Apartado(
+	idApartado int AUTO_INCREMENT,
+	PRIMARY KEY(idApartado)
+);
+
+create table Cliente(
+	idCliente int AUTO_INCREMENT,
+	Puntos int NOT NULL,
+	Nombre varchar(50) NOT NULL,
+	Correo varchar(50) NOT NULL,
+	Contraseña varchar(50) NOT NULL,
+	Tipo int NOT NULL,
+	idSuscripcion int,
+	idApartado int,
+	FOREIGN KEY(idSuscripcion) REFERENCES Suscripcion(idSuscripcion),
+	FOREIGN KEY(idApartado) REFERENCES Apartado(idApartado),
+	PRIMARY KEY(idCliente)
+);
+
+create table Comic(
+	idComic int AUTO_INCREMENT,
+	Nombre varchar(50) NOT NULL,
+	fechaPub date NOT NULL,
+	Editorial varchar(50) NOT NULL,
+	Status varchar(30) NOT NULL,
+	Precio float NOT NULL,
+	PRIMARY KEY(idComic)
+);
+
+create table Serie(
+	idSerie int AUTO_INCREMENT,
+	Nombre varchar(50) NOT NULL,
+	Editoral varchar(50) NOT NULL,
+	PRIMARY KEY(idSerie)
+);
+
+create table Compra(
+	idCompra int AUTO_INCREMENT,
+	Costo float NOT NULL,
+	idCliente int,
+	PRIMARY KEY(idCompra),
+	FOREIGN KEY(idCliente) REFERENCES Cliente(idCliente)
+);
+
+create table Comic_TP(
+	idTP int AUTO_INCREMENT,
+	idComic int NOT NULL,
+	PRIMARY KEY(idTP),
+	FOREIGN KEY(idComic) REFERENCES Comic(idComic)
+);
+
+create table Comic_HC(
+	idHC int AUTO_INCREMENT,
+	idComic int NOT NULL,
+	PRIMARY KEY(idHC),
+	FOREIGN KEY(idComic) REFERENCES Comic(idComic)
+);
+
+create table Comic_GR(
+	idGR int AUTO_INCREMENT,
+	idComic int NOT NULL,
+	PRIMARY KEY(idGR),
+	FOREIGN KEY(idComic) REFERENCES Comic(idComic)
+);
+
+create table SuscripcionASerie(
+	idSuscripcion int NOT NULL,
+	idSerie int NOT NULL,
+	FOREIGN KEY(idSuscripcion) REFERENCES Suscripcion(idSuscripcion),
+	FOREIGN KEY(idSerie) REFERENCES Serie(idSerie)
+);
+
+create table ComicComprado(
+	idCompra int NOT NULL,
+	idComic int NOT NULL,
+	FOREIGN KEY(idCompra) REFERENCES Compra(idCompra),
+	FOREIGN KEY(idComic) REFERENCES Comic(idComic)
+);
+
+create table ComicApartado(
+	idApartado int NOT NULL,
+	idComic int NOT NULL,
+	FOREIGN KEY(idApartado) REFERENCES Apartado(idApartado),
+	FOREIGN KEY(idComic) REFERENCES Comic(idComic)
+);

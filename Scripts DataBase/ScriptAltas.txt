@@ -1,0 +1,217 @@
+Insert into cliente(Puntos, Nombre, Correo, Contraseña, Tipo)
+	values
+	(43, 'Oscar Cabagné', 'OCabagne@outlook.com', '1234', 1);
+Insert into apartado()
+	values();
+Update cliente
+	set idApartado =(Select LAST_INSERT_ID())
+	where idCliente = LAST_INSERT_ID();
+
+Insert into cliente(Puntos, Nombre, Correo, Contraseña, Tipo)
+	values
+	(20, 'Vanessa Estrada', 'VEstrada@outlook.com', '1324', 1);
+Insert into apartado()
+	values();
+Update cliente
+	set idApartado =(Select LAST_INSERT_ID())
+	where idCliente = LAST_INSERT_ID();
+
+Insert into cliente(Puntos, Nombre, Correo, Contraseña, Tipo)
+	values
+	(13, 'Benjamin Dubey', 'BDubey@outlook.com', '1243', 1);
+Insert into apartado()
+	values();
+Update cliente
+	set idApartado =(Select LAST_INSERT_ID())
+	where idCliente = LAST_INSERT_ID();
+
+Insert into cliente(Puntos, Nombre, Correo, Contraseña, Tipo)
+	values
+	(0, 'Hiram Garibay', 'HGaribay@outlook.com', '4321', 1);
+Insert into apartado()
+	values();
+Update cliente
+	set idApartado =(Select LAST_INSERT_ID())
+	where idCliente = LAST_INSERT_ID();
+
+Insert into cliente(Puntos, Nombre, Correo, Contraseña, Tipo)
+	values
+	(0, 'Tony Stark', 'TStark@stark.com', '4321', 2);
+Insert into apartado()
+	values();
+Update cliente
+	set idApartado =(Select LAST_INSERT_ID())
+	where idCliente = LAST_INSERT_ID();
+
+Insert into comic(Nombre, fechaPub, Editorial, Status, Precio)
+	values
+	('Flashpoint', '2008-03-07' , 'DC Comics', 'Disponible', 430);
+
+Insert into comic(Nombre, fechaPub, Editorial, Status, Precio)
+	values
+	('Watchmen', '2003-03-07' , 'DC Comics', 'Disponible', 460);
+
+Insert into comic(Nombre, fechaPub, Editorial, Status, Precio)
+	values
+	('The Amazing Spider-man #797', '2018-03-07' , 'Marvel Comics', 'Limitado', 110);
+
+
+Insert into comic(Nombre, fechaPub, Editorial, Status, Precio)
+	values
+	('The Amazing Spider-man #798', '2018-04-07' , 'Marvel Comics', 'Limitado', 110);
+
+
+Insert into comic(Nombre, fechaPub, Editorial, Status, Precio)
+	values
+	('The Amazing Spider-man #799', '2018-05-07' , 'Marvel Comics', 'Limitado', 110);
+
+
+Insert into comic(Nombre, fechaPub, Editorial, Status, Precio)
+	values
+	('The Amazing Spider-man #800', '2018-06-07' , 'Marvel Comics', 'Limitado', 110);
+
+
+Insert into comic(Nombre, fechaPub, Editorial, Status, Precio)
+	values
+	('The Amazing Spider-man #801', '2018-07-07' , 'Marvel Comics', 'Limitado', 110);
+
+
+Insert into suscripcion(Tipo, FechaInicio)
+	values('Gold', now());
+Update cliente
+	set idSuscripcion = (Select LAST_INSERT_ID())
+	where idCliente = 1;
+
+Insert into suscripcion(Tipo, FechaInicio)
+	values('Silver', now());
+Update cliente
+	set idSuscripcion = (Select LAST_INSERT_ID())
+	where idCliente = 2;
+
+Insert into suscripcion(Tipo, FechaInicio)
+	values('Bronze', now());
+Update cliente
+	set idSuscripcion = (Select LAST_INSERT_ID())
+	where idCliente = 3;
+
+Insert into suscripcion(Tipo, FechaInicio)
+	values('Basic', now());
+Update cliente
+	set idSuscripcion = (Select LAST_INSERT_ID())
+	where idCliente = 4;
+
+
+Insert into comicapartado(idComic, idApartado)
+	values(
+	(Select idComic from comic where Nombre like 'The Amazing Spider-man #797'),
+	(Select idApartado from Cliente where idCliente = 1)
+);
+Insert into comicapartado(idComic, idApartado)
+	values(
+	(Select idComic from comic where Nombre like 'The Amazing Spider-man #798'),
+	(Select idApartado from Cliente where idCliente = 1)
+);
+Insert into comicapartado(idComic, idApartado)
+	values(
+	(Select idComic from comic where Nombre like 'The Amazing Spider-man #798'),
+	(Select idApartado from Cliente where idCliente = 1)
+);
+Insert into comicapartado(idComic, idApartado)
+	values(
+	(Select idComic from comic where Nombre like 'The Amazing Spider-man #799'),
+	(Select idApartado from Cliente where idCliente = 1)
+);
+Insert into comicapartado(idComic, idApartado)
+	values(
+	(Select idComic from comic where Nombre like 'The Amazing Spider-man #798'),
+	(Select idApartado from Cliente where idCliente = 2)
+);
+Insert into comicapartado(idComic, idApartado)
+	values(
+	(Select idComic from comic where Nombre like 'The Amazing Spider-man #799'),
+	(Select idApartado from Cliente where idCliente = 2)
+);
+Insert into comicapartado(idComic, idApartado)
+	values(
+	(Select idComic from comic where Nombre like 'The Amazing Spider-man #801'),
+	(Select idApartado from Cliente where idCliente = 4)
+);
+
+
+Insert into Serie(Nombre, Editoral)
+	values
+	('The Amazing Spider-man 4th Series', 'Marvel');
+
+Insert into Serie(Nombre, Editoral)
+	values
+	('The Amazing Spider-man 5th Series', 'Marvel');
+
+Insert into Serie(Nombre, Editoral)
+	values
+	('Batman 4th Series', 'DC Comics');
+
+Insert into Serie(Nombre, Editoral)
+	values
+	('The Flash 4th Series', 'DC Comics');
+
+Insert into Serie(Nombre, Editoral)
+	values
+	('Fantastic Four 4th Series', 'Marvel');
+
+Insert into suscripcionaserie(idSuscripcion, idSerie)
+	values(
+	(Select idSuscripcion from Cliente where idCliente = 1),
+	(Select idSerie from serie where Nombre like 'The Amazing Spider-man 4th Series')
+);
+Insert into suscripcionaserie(idSuscripcion, idSerie)
+	values(
+	(Select idSuscripcion from Cliente where idCliente = 1),
+	(Select idSerie from serie where Nombre like 'Fantastic Four 4th Series')
+);
+Insert into suscripcionaserie(idSuscripcion, idSerie)
+	values(
+	(Select idSuscripcion from Cliente where idCliente = 2),
+	(Select idSerie from serie where Nombre like 'Fantastic Four 4th Series')
+);
+Insert into suscripcionaserie(idSuscripcion, idSerie)
+	values(
+	(Select idSuscripcion from Cliente where idCliente = 3),
+	(Select idSerie from serie where Nombre like 'Batman 4th Series')
+);
+Insert into suscripcionaserie(idSuscripcion, idSerie)
+	values(
+	(Select idSuscripcion from Cliente where idCliente = 4),
+	(Select idSerie from serie where Nombre like 'The Flash 4th Series')
+);
+
+Insert into comic_tp(idComic)
+	values(
+	(Select idComic from comic where Nombre like 'Flashpoint')
+);
+
+Insert into comic_hc(idComic)
+	values(
+	(Select idComic from comic where Nombre like 'Watchmen')
+);
+
+Insert into comic_gr(idComic)
+	values(
+	(Select idComic from comic where Nombre like 'The Amazing Spider-man #797')
+);
+
+Insert into comic_gr(idComic)
+	values(
+	(Select idComic from comic where Nombre like 'The Amazing Spider-man #798')
+);
+Insert into comic_gr(idComic)
+	values(
+	(Select idComic from comic where Nombre like 'The Amazing Spider-man #799')
+);
+Insert into comic_gr(idComic)
+	values(
+	(Select idComic from comic where Nombre like 'The Amazing Spider-man #800')
+);
+Insert into comic_gr(idComic)
+	values(
+	(Select idComic from comic where Nombre like 'The Amazing Spider-man #801')
+);
