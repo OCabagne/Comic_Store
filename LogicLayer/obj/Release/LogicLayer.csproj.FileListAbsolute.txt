@@ -1,0 +1,13 @@
+C:\Users\Oscar\Desktop\Pruebas\ComicStore\LogicLayer\bin\Release\LogicLayer.dll
+C:\Users\Oscar\Desktop\Pruebas\ComicStore\LogicLayer\bin\Release\LogicLayer.pdb
+C:\Users\Oscar\Desktop\Pruebas\ComicStore\LogicLayer\bin\Release\DataLayer.dll
+C:\Users\Oscar\Desktop\Pruebas\ComicStore\LogicLayer\bin\Release\MySql.Data.dll
+C:\Users\Oscar\Desktop\Pruebas\ComicStore\LogicLayer\bin\Release\Google.Protobuf.dll
+C:\Users\Oscar\Desktop\Pruebas\ComicStore\LogicLayer\bin\Release\DataLayer.pdb
+C:\Users\Oscar\Desktop\Pruebas\ComicStore\LogicLayer\bin\Release\DataLayer.dll.config
+C:\Users\Oscar\Desktop\Pruebas\ComicStore\LogicLayer\bin\Release\MySql.Data.xml
+C:\Users\Oscar\Desktop\Pruebas\ComicStore\LogicLayer\obj\Release\LogicLayer.csprojAssemblyReference.cache
+C:\Users\Oscar\Desktop\Pruebas\ComicStore\LogicLayer\obj\Release\LogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\Oscar\Desktop\Pruebas\ComicStore\LogicLayer\obj\Release\LogicLayer.csproj.CopyComplete
+C:\Users\Oscar\Desktop\Pruebas\ComicStore\LogicLayer\obj\Release\LogicLayer.dll
+C:\Users\Oscar\Desktop\Pruebas\ComicStore\LogicLayer\obj\Release\LogicLayer.pdb
