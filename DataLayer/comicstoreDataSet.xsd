@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="comicstoreDataSet" targetNamespace="http://tempuri.org/comicstoreDataSet.xsd" xmlns:mstns="http://tempuri.org/comicstoreDataSet.xsd" xmlns="http://tempuri.org/comicstoreDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="comicstoreConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="comicstoreConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DataLayer.Properties.Settings.GlobalReference.Default.comicstoreConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="apartadoTableAdapter" GeneratorDataComponentClassName="apartadoTableAdapter" Name="apartado" UserDataComponentName="apartadoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="comicstoreConnectionString (Settings)" DbObjectName="comicstore.apartado" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT idApartado FROM apartado</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="clienteTableAdapter" GeneratorDataComponentClassName="clienteTableAdapter" Name="cliente" UserDataComponentName="clienteTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="comicstoreConnectionString (Settings)" DbObjectName="comicstore.cliente" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT idCliente, Nombre, Correo, idSuscripcion, idApartado FROM cliente</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="comicTableAdapter" GeneratorDataComponentClassName="comicTableAdapter" Name="comic" UserDataComponentName="comicTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="comicstoreConnectionString (Settings)" DbObjectName="comicstore.comic" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT idComic, fechaPub, Editorial, Status, Precio FROM comic</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="comic_grTableAdapter" GeneratorDataComponentClassName="comic_grTableAdapter" Name="comic_gr" UserDataComponentName="comic_grTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="comicstoreConnectionString (Settings)" DbObjectName="comicstore.comic_gr" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT idGR, idComic FROM comic_gr</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="comic_hcTableAdapter" GeneratorDataComponentClassName="comic_hcTableAdapter" Name="comic_hc" UserDataComponentName="comic_hcTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="comicstoreConnectionString (Settings)" DbObjectName="comicstore.comic_hc" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT idHC, idComic FROM comic_hc</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="comic_tpTableAdapter" GeneratorDataComponentClassName="comic_tpTableAdapter" Name="comic_tp" UserDataComponentName="comic_tpTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="comicstoreConnectionString (Settings)" DbObjectName="comicstore.comic_tp" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT idTP, idComic FROM comic_tp</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="comicapartadoTableAdapter" GeneratorDataComponentClassName="comicapartadoTableAdapter" Name="comicapartado" UserDataComponentName="comicapartadoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="comicstoreConnectionString (Settings)" DbObjectName="comicstore.comicapartado" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT idApartado, idComic FROM comicapartado</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="comiccompradoTableAdapter" GeneratorDataComponentClassName="comiccompradoTableAdapter" Name="comiccomprado" UserDataComponentName="comiccompradoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="comicstoreConnectionString (Settings)" DbObjectName="comicstore.comiccomprado" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT idCompra, idComic FROM comiccomprado</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="compraTableAdapter" GeneratorDataComponentClassName="compraTableAdapter" Name="compra" UserDataComponentName="compraTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="comicstoreConnectionString (Settings)" DbObjectName="comicstore.compra" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT idCompra, Costo, idCliente FROM compra</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="serieTableAdapter" GeneratorDataComponentClassName="serieTableAdapter" Name="serie" UserDataComponentName="serieTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="comicstoreConnectionString (Settings)" DbObjectName="comicstore.serie" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT idSerie, Nombre, Editoral FROM serie</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="suscripcionTableAdapter" GeneratorDataComponentClassName="suscripcionTableAdapter" Name="suscripcion" UserDataComponentName="suscripcionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="comicstoreConnectionString (Settings)" DbObjectName="comicstore.suscripcion" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT idSuscripcion, Tipo, fechaInicio FROM suscripcion</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="suscripcionaserieTableAdapter" GeneratorDataComponentClassName="suscripcionaserieTableAdapter" Name="suscripcionaserie" UserDataComponentName="suscripcionaserieTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="comicstoreConnectionString (Settings)" DbObjectName="comicstore.suscripcionaserie" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT idSuscripcion, idSerie FROM suscripcionaserie</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="comicstoreDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="comicstoreDataSet" msprop:Generator_UserDSName="comicstoreDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="apartado" msprop:Generator_TableClassName="apartadoDataTable" msprop:Generator_TableVarName="tableapartado" msprop:Generator_TablePropName="apartado" msprop:Generator_RowDeletingName="apartadoRowDeleting" msprop:Generator_RowChangingName="apartadoRowChanging" msprop:Generator_RowEvHandlerName="apartadoRowChangeEventHandler" msprop:Generator_RowDeletedName="apartadoRowDeleted" msprop:Generator_UserTableName="apartado" msprop:Generator_RowChangedName="apartadoRowChanged" msprop:Generator_RowEvArgName="apartadoRowChangeEvent" msprop:Generator_RowClassName="apartadoRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="cliente" msprop:Generator_TableClassName="clienteDataTable" msprop:Generator_TableVarName="tablecliente" msprop:Generator_TablePropName="cliente" msprop:Generator_RowDeletingName="clienteRowDeleting" msprop:Generator_RowChangingName="clienteRowChanging" msprop:Generator_RowEvHandlerName="clienteRowChangeEventHandler" msprop:Generator_RowDeletedName="clienteRowDeleted" msprop:Generator_UserTableName="cliente" msprop:Generator_RowChangedName="clienteRowChanged" msprop:Generator_RowEvArgName="clienteRowChangeEvent" msprop:Generator_RowClassName="clienteRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="comic" msprop:Generator_TableClassName="comicDataTable" msprop:Generator_TableVarName="tablecomic" msprop:Generator_TablePropName="comic" msprop:Generator_RowDeletingName="comicRowDeleting" msprop:Generator_RowChangingName="comicRowChanging" msprop:Generator_RowEvHandlerName="comicRowChangeEventHandler" msprop:Generator_RowDeletedName="comicRowDeleted" msprop:Generator_UserTableName="comic" msprop:Generator_RowChangedName="comicRowChanged" msprop:Generator_RowEvArgName="comicRowChangeEvent" msprop:Generator_RowClassName="comicRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="comic_gr" msprop:Generator_TableClassName="comic_grDataTable" msprop:Generator_TableVarName="tablecomic_gr" msprop:Generator_TablePropName="comic_gr" msprop:Generator_RowDeletingName="comic_grRowDeleting" msprop:Generator_RowChangingName="comic_grRowChanging" msprop:Generator_RowEvHandlerName="comic_grRowChangeEventHandler" msprop:Generator_RowDeletedName="comic_grRowDeleted" msprop:Generator_UserTableName="comic_gr" msprop:Generator_RowChangedName="comic_grRowChanged" msprop:Generator_RowEvArgName="comic_grRowChangeEvent" msprop:Generator_RowClassName="comic_grRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="comic_hc" msprop:Generator_TableClassName="comic_hcDataTable" msprop:Generator_TableVarName="tablecomic_hc" msprop:Generator_TablePropName="comic_hc" msprop:Generator_RowDeletingName="comic_hcRowDeleting" msprop:Generator_RowChangingName="comic_hcRowChanging" msprop:Generator_RowEvHandlerName="comic_hcRowChangeEventHandler" msprop:Generator_RowDeletedName="comic_hcRowDeleted" msprop:Generator_UserTableName="comic_hc" msprop:Generator_RowChangedName="comic_hcRowChanged" msprop:Generator_RowEvArgName="comic_hcRowChangeEvent" msprop:Generator_RowClassName="comic_hcRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="comic_tp" msprop:Generator_TableClassName="comic_tpDataTable" msprop:Generator_TableVarName="tablecomic_tp" msprop:Generator_TablePropName="comic_tp" msprop:Generator_RowDeletingName="comic_tpRowDeleting" msprop:Generator_RowChangingName="comic_tpRowChanging" msprop:Generator_RowEvHandlerName="comic_tpRowChangeEventHandler" msprop:Generator_RowDeletedName="comic_tpRowDeleted" msprop:Generator_UserTableName="comic_tp" msprop:Generator_RowChangedName="comic_tpRowChanged" msprop:Generator_RowEvArgName="comic_tpRowChangeEvent" msprop:Generator_RowClassName="comic_tpRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="comicapartado" msprop:Generator_TableClassName="comicapartadoDataTable" msprop:Generator_TableVarName="tablecomicapartado" msprop:Generator_TablePropName="comicapartado" msprop:Generator_RowDeletingName="comicapartadoRowDeleting" msprop:Generator_RowChangingName="comicapartadoRowChanging" msprop:Generator_RowEvHandlerName="comicapartadoRowChangeEventHandler" msprop:Generator_RowDeletedName="comicapartadoRowDeleted" msprop:Generator_UserTableName="comicapartado" msprop:Generator_RowChangedName="comicapartadoRowChanged" msprop:Generator_RowEvArgName="comicapartadoRowChangeEvent" msprop:Generator_RowClassName="comicapartadoRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="comiccomprado" msprop:Generator_TableClassName="comiccompradoDataTable" msprop:Generator_TableVarName="tablecomiccomprado" msprop:Generator_TablePropName="comiccomprado" msprop:Generator_RowDeletingName="comiccompradoRowDeleting" msprop:Generator_RowChangingName="comiccompradoRowChanging" msprop:Generator_RowEvHandlerName="comiccompradoRowChangeEventHandler" msprop:Generator_RowDeletedName="comiccompradoRowDeleted" msprop:Generator_UserTableName="comiccomprado" msprop:Generator_RowChangedName="comiccompradoRowChanged" msprop:Generator_RowEvArgName="comiccompradoRowChangeEvent" msprop:Generator_RowClassName="comiccompradoRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="compra" msprop:Generator_TableClassName="compraDataTable" msprop:Generator_TableVarName="tablecompra" msprop:Generator_TablePropName="compra" msprop:Generator_RowDeletingName="compraRowDeleting" msprop:Generator_RowChangingName="compraRowChanging" msprop:Generator_RowEvHandlerName="compraRowChangeEventHandler" msprop:Generator_RowDeletedName="compraRowDeleted" msprop:Generator_UserTableName="compra" msprop:Generator_RowChangedName="compraRowChanged" msprop:Generator_RowEvArgName="compraRowChangeEvent" msprop:Generator_RowClassName="compraRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="serie" msprop:Generator_TableClassName="serieDataTable" msprop:Generator_TableVarName="tableserie" msprop:Generator_TablePropName="serie" msprop:Generator_RowDeletingName="serieRowDeleting" msprop:Generator_RowChangingName="serieRowChanging" msprop:Generator_RowEvHandlerName="serieRowChangeEventHandler" msprop:Generator_RowDeletedName="serieRowDeleted" msprop:Generator_UserTableName="serie" msprop:Generator_RowChangedName="serieRowChanged" msprop:Generator_RowEvArgName="serieRowChangeEvent" msprop:Generator_RowClassName="serieRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="suscripcion" msprop:Generator_TableClassName="suscripcionDataTable" msprop:Generator_TableVarName="tablesuscripcion" msprop:Generator_TablePropName="suscripcion" msprop:Generator_RowDeletingName="suscripcionRowDeleting" msprop:Generator_RowChangingName="suscripcionRowChanging" msprop:Generator_RowEvHandlerName="suscripcionRowChangeEventHandler" msprop:Generator_RowDeletedName="suscripcionRowDeleted" msprop:Generator_UserTableName="suscripcion" msprop:Generator_RowChangedName="suscripcionRowChanged" msprop:Generator_RowEvArgName="suscripcionRowChangeEvent" msprop:Generator_RowClassName="suscripcionRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="suscripcionaserie" msprop:Generator_TableClassName="suscripcionaserieDataTable" msprop:Generator_TableVarName="tablesuscripcionaserie" msprop:Generator_TablePropName="suscripcionaserie" msprop:Generator_RowDeletingName="suscripcionaserieRowDeleting" msprop:Generator_RowChangingName="suscripcionaserieRowChanging" msprop:Generator_RowEvHandlerName="suscripcionaserieRowChangeEventHandler" msprop:Generator_RowDeletedName="suscripcionaserieRowDeleted" msprop:Generator_UserTableName="suscripcionaserie" msprop:Generator_RowChangedName="suscripcionaserieRowChanged" msprop:Generator_RowEvArgName="suscripcionaserieRowChangeEvent" msprop:Generator_RowClassName="suscripcionaserieRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
